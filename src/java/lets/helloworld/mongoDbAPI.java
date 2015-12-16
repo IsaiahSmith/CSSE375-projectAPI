@@ -18,11 +18,11 @@ import static java.util.Arrays.asList;
 
 public class mongoDbAPI {
 	private MongoDatabase db;
-	private SHA1 sha;
+	//private SHA1 sha;
 	
 	public mongoDbAPI(MongoDatabase db){
 		this.db=db;
-		this.sha = new SHA1();
+		//this.sha = new SHA1();
 	}
 	
 	public int insertUser(User u) {
@@ -95,7 +95,7 @@ public class mongoDbAPI {
 		FindIterable<Document> iterable = db.getCollection("user").find(new BasicDBObject("_id", owner_id));
         Document doc = iterable.first();
         String test = doc.getString("password");
-        password = sha.encrypt(password);
+        //password = sha.encrypt(password);
         if(test.equals(password)){
         	return doc;
         }

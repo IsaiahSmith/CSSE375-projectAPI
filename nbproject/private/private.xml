@@ -5,10 +5,16 @@
         <group>
             <file>file:/C:/Users/smithij/Documents/CSSE/375/CSSE375-projectAPI/src/java/lets/helloworld/InsertUserServlet.java</file>
             <file>file:/C:/Users/smithij/Documents/CSSE/375/CSSE375-projectAPI/src/java/lets/helloworld/InsertEventServlet.java</file>
+            <file>file:/C:/Users/smithij/Documents/CSSE/375/CSSE375-projectAPI/src/java/lets/helloworld/FollowServlet.java</file>
+            <file>file:/C:/Users/smithij/Documents/CSSE/375/CSSE375-projectAPI/src/java/lets/helloworld/LoginServlet.java</file>
+            <file>file:/C:/Users/smithij/Documents/CSSE/375/CSSE375-projectAPI/src/java/lets/helloworld/User.java</file>
+            <file>file:/C:/Users/smithij/Documents/CSSE/375/CSSE375-projectAPI/src/java/lets/helloworld/MangoConnection.java</file>
+            <file>file:/C:/Users/smithij/Documents/CSSE/375/CSSE375-projectAPI/src/java/lets/helloworld/HelloWorldServlet.java</file>
+            <file>file:/C:/Users/smithij/Documents/CSSE/375/CSSE375-projectAPI/src/java/lets/helloworld/UnFollowServlet.java</file>
             <file>file:/C:/Users/smithij/Documents/CSSE/375/CSSE375-projectAPI/src/java/lets/helloworld/AdvancedSearchServlet.java</file>
-            <file>file:/C:/Users/smithij/Documents/CSSE/375/CSSE375-projectAPI/src/java/lets/helloworld/SHA1.java</file>
             <file>file:/C:/Users/smithij/Documents/CSSE/375/CSSE375-projectAPI/src/java/lets/helloworld/mongoDbAPI.java</file>
-            <file>file:/C:/Users/smithij/Documents/CSSE/375/CSSE375-projectAPI/src/java/lets/helloworld/Event.java</file>
+            <file>file:/C:/Users/smithij/Documents/CSSE/375/CSSE375-projectAPI/src/java/lets/helloworld/GetUserServlet.java</file>
+            <file>file:/C:/Users/smithij/Documents/CSSE/375/CSSE375-projectAPI/src/java/lets/helloworld/ResetPasswordServlet.java</file>
             <file>file:/C:/Users/smithij/Documents/CSSE/375/CSSE375-projectAPI/src/java/lets/helloworld/GetAllEventsServlet.java</file>
         </group>
     </open-files>

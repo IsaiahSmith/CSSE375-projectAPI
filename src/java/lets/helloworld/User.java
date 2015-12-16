@@ -25,7 +25,7 @@ public class User {
 	private String gender;
 	private Date dob;
 	private Document doc;
-        private SHA1 sha = new SHA1();
+        //private SHA1 sha = new SHA1();
 
 	public User(String _id, String password, String name, String street,
 			String city, String state, String zipCode, String gender, Date dob) {

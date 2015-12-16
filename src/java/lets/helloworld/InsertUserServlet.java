@@ -49,10 +49,10 @@ public class InsertUserServlet extends HttpServlet {
         try {
             OutputStreamWriter writer = new OutputStreamWriter(response.getOutputStream());
             try {
-                this.sha = new SHA1();
+                //this.sha = new SHA1();
                 String _id = request.getParameter("_id");
                 String name = request.getParameter("name");
-                String password = sha.encrypt(request.getParameter("password"));
+                String password = request.getParameter("password");
                 String street = request.getParameter("street");
                 String city = request.getParameter("city");
                 String state = request.getParameter("state");
