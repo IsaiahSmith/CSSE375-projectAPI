@@ -70,7 +70,7 @@ public class AdvancedSearchServlet extends HttpServlet {
     
     @Override
     public void init() throws ServletException {
-        mango = new MangoConnection("lets", "hamilton",
+        mango = new MangoConnection("test_db", "Temp",
                 "Qwerty123");
         mDB = mango.getDB();
         api = new mongoDbAPI(mDB);

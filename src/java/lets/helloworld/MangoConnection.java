@@ -21,7 +21,7 @@ import com.mongodb.client.MongoDatabase;
 
 public class MangoConnection {
 
-	private static final ServerAddress address = new ServerAddress("ds037283.mongolab.com", 37283);
+	private static final ServerAddress address = new ServerAddress("ds029595.mongolab.com", 29595);
 	private final MongoClient mClient;
 	private final MongoDatabase mDB;
 	

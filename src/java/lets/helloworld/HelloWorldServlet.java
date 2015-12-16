@@ -82,7 +82,7 @@ public class HelloWorldServlet extends HttpServlet {
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     @Override
     public void init() throws ServletException {
-        mango = new MangoConnection("lets", "hamilton",
+        mango = new MangoConnection("test_db", "Temp",
                 "Qwerty123");
         mDB = mango.getDB();
         super.init();
