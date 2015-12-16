@@ -45,8 +45,21 @@ public class mongoDbAPI {
 	}
 		
 	public ArrayList<Event> getAllEvents(){
-		ArrayList<Event> allE = new ArrayList<Event>();
+		final ArrayList<Event> allE = new ArrayList<Event>();
 		FindIterable<Document> iterable = db.getCollection("event").find();
+		iterable.forEach(new Block<Document>(){
+			@Override
+			public void apply(Document arg0) {
+				allE.add(new Event(arg0));
+//				System.out.println(arg0);
+			}
+		});
+		return allE;
+	}
+        
+        public ArrayList<Event> getSearchedEvents(String tags){
+		final ArrayList<Event> allE = new ArrayList<Event>();
+		FindIterable<Document> iterable = db.getCollection("event").find(new BasicDBObject("tags", tags));
 		iterable.forEach(new Block<Document>(){
 			@Override
 			public void apply(Document arg0) {
