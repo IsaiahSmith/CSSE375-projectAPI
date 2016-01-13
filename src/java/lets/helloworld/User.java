@@ -23,12 +23,12 @@ public class User {
 	private String state;
 	private String zipCode;
 	private String gender;
-	private Date dob;
+	private String dob;
 	private Document doc;
         //private SHA1 sha = new SHA1();
 
 	public User(String _id, String password, String name, String street,
-			String city, String state, String zipCode, String gender, Date dob) {
+			String city, String state, String zipCode, String gender, String dob) {
 		this._id = _id;
 		this.name = name;
 		this.password = password;
@@ -59,7 +59,7 @@ public class User {
 		this.state = (String) address.get("state");
 		this.zipCode = (String) address.get("zipCode");
 		this.gender = (String) profile.get("gender");
-		this.dob = (Date) profile.get("dob");
+		this.dob = (String) profile.get("dob").toString();
 		this.interests = (ArrayList<String>) userInfo.get("interests");
 		this.following = (ArrayList<String>) userInfo.get("following");
 	}
@@ -90,7 +90,7 @@ public class User {
 		return doc;
 	}
 
-	public Date getDOB() {
+	public String getDOB() {
 		return this.dob;
 	}
 

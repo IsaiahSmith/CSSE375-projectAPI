@@ -52,7 +52,6 @@ public class InsertEventServlet extends HttpServlet {
             OutputStreamWriter writer = new OutputStreamWriter(response.getOutputStream());
             try {
                 String owner_id = request.getParameter("owner_id");
-                
                 User u = new User(api.getUser(owner_id));
                 
                 String loc = "";

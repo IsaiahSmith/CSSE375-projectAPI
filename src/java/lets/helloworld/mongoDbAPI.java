@@ -39,7 +39,7 @@ public class mongoDbAPI {
 				new BasicDBObject("_id", user_id));
 		Document doc = iterable.first();
 		if (doc == null) {
-			return new Document("false", 1);
+                    return new Document("false", 1);
 		}
 		return doc;
 	}
