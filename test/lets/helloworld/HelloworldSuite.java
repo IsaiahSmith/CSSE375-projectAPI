@@ -5,8 +5,11 @@
  */
 package lets.helloworld;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
+import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 
@@ -15,7 +18,7 @@ import org.junit.runners.Suite;
  * @author duffytj
  */
 @RunWith(Suite.class)
-@Suite.SuiteClasses({lets.helloworld.InsertEventServletTest.class, lets.helloworld.InsertUserServletTest.class})
+@Suite.SuiteClasses({lets.helloworld.InsertEventServletTest.class, lets.helloworld.InsertUserServletTest.class, lets.helloworld.GetUserServletTest.class, lets.helloworld.GetAllEventsServletTest.class})
 public class HelloworldSuite {
 
     @BeforeClass
