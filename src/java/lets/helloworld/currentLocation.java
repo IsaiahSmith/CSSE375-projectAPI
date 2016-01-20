@@ -25,8 +25,8 @@ public class currentLocation {
 		String inputLine = in.readLine();
 		in.close();
 
-		JSONObject obj = new JSONObject(inputLine);
-		return (String) obj.get(requirement);
+//		JSONObject obj = new JSONObject(inputLine);
+		return (String) new JSONObject(inputLine).get(requirement);
 	}
 
 	public static Point2D.Double getLoc() {
@@ -38,9 +38,9 @@ public class currentLocation {
 			String inputLine = in.readLine();
 			in.close();
 			JSONObject obj = new JSONObject(inputLine);
-			double x = (double) obj.get("latitude");
-			double y = (double) obj.get("longitude");
-			return new Point2D.Double(x,y);
+//			double x = (double) obj.get("latitude");
+//			double y = (double) obj.get("longitude");
+			return new Point2D.Double((double) obj.get("latitude"), (double) obj.get("longitude"));
 		} catch (Exception e) {
 			System.out.println("url exception");
 		}
