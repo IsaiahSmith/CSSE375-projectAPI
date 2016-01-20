@@ -39,10 +39,12 @@ public class FollowServlet extends AbstractServlet {
 
                 String following_id = request.getParameter("following_id");
                 String owner_id = request.getParameter("owner_id");
-                String password = request.getParameter("password");
+                //String password = request.getParameter("password");
                 
-                User u = new User(api.login(owner_id, password));
+                //User u = new User(api.login(owner_id, password));
 
+                User u = new User(api.getUser(owner_id));
+                
                 u.follow(following_id, mDB);
                 String ans = "true";
 

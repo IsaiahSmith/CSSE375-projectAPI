@@ -86,7 +86,8 @@ public class User {
 						new Document("all_ids", new ArrayList<String>())
 								.append("currEvent_ids",
 										new ArrayList<String>()))
-				.append("interests", new ArrayList<String>());
+				.append("interests", new ArrayList<String>())
+                                .append("following", getFollowing());
 		return doc;
 	}
 
