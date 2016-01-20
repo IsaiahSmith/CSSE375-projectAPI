@@ -20,8 +20,6 @@ import javax.servlet.http.HttpServletResponse;
  */
 @WebServlet(name = "InsertUserServlet", urlPatterns = {"/InsertUserServlet"})
 public class InsertUserServlet extends AbstractServlet {
-    
-    private SHA1 sha;
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
