@@ -28,12 +28,14 @@ public class mongoDbAPITest {
     private MangoConnection mango;
     private MongoDatabase mDB;
     private mongoDbAPI api;
+    private String user_id;
     
     public mongoDbAPITest() {
         mango = new MangoConnection("test_db", "Temp",
                 "Qwerty123");
         mDB = mango.getDB();
         api = new mongoDbAPI(mDB);
+        user_id = "";
     }
     
     @BeforeClass
@@ -53,6 +55,7 @@ public class mongoDbAPITest {
         
         // ensures a "unique" id for each new user added
         String _id = Long.toString(new Date().getTime()) + "@test.com";
+        user_id = _id;
         String name = "sample_name";
         String password = "sample_password";
         String street = "sample_street";
@@ -143,13 +146,37 @@ public class mongoDbAPITest {
     @Test
     public void testGetEvent() {
         System.out.println("getEvent");
-//        String eventId = "";
-//        mongoDbAPI instance = null;
-//        Event expResult = null;
-//        Event result = instance.getEvent(eventId);
-        //assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        //fail("The test case is a prototype.");
+        String knownEventID1 = "56719c1d44fd702acc7a0c85";
+        String knownEventID2 = "56731ae9bfb2430dc03e87e1";
+        String knownEventID3 = "56731d97bfb2430dc03e87e3";
+        
+        String knownDescription1 = "Testing Events";
+        String knownDescription2 = "NoDescription";
+        String knownDescription3 = "NoDescription";
+        
+        String knownUserID1 = "test@test.com";
+        String knownUserID2 = "test@test.com";
+        String knownUserID3 = "test@test.com";
+        
+        String knownTitle1 = "Tester";
+        String knownTitle2 = "SampleTitle";
+        String knownTitle3 = "SampleTitleROUNDTWO";
+        
+        Document eventDoc1 = api.getEvent(knownEventID1).toEventDoc();
+        assertEquals(knownDescription1, eventDoc1.get("description"));
+        assertEquals(knownUserID1, eventDoc1.get("host_id"));
+        assertEquals(knownTitle1, eventDoc1.get("title"));
+        
+        Document eventDoc2 = api.getEvent(knownEventID2).toEventDoc();
+        assertEquals(knownDescription2, eventDoc2.get("description"));
+        assertEquals(knownUserID2, eventDoc2.get("host_id"));
+        assertEquals(knownTitle2, eventDoc2.get("title"));
+        
+        Document eventDoc3 = api.getEvent(knownEventID3).toEventDoc();
+        assertEquals(knownDescription3, eventDoc3.get("description"));
+        assertEquals(knownUserID3, eventDoc3.get("host_id"));
+        assertEquals(knownTitle3, eventDoc3.get("title"));
+        
     }
 
     /**
@@ -158,14 +185,6 @@ public class mongoDbAPITest {
     @Test
     public void testLogin() {
         System.out.println("login");
-//        String owner_id = "";
-//        String password = "";
-//        mongoDbAPI instance = null;
-//        Document expResult = null;
-//        Document result = instance.login(owner_id, password);
-        //assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        //fail("The test case is a prototype.");
     }
     
 }
