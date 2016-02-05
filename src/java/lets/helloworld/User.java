@@ -174,4 +174,12 @@ public class User {
 	public String toString(){
 		return this.toDoc().toJson();
 	}
+        
+        public boolean equals(User compareUser) {
+            Document userDoc = compareUser.toDoc();
+            if (!userDoc.get("_id").equals(_id)) {
+                return false;
+            }
+            return true;
+        }
 }

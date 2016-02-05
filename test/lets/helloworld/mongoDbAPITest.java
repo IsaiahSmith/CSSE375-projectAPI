@@ -121,23 +121,24 @@ public class mongoDbAPITest {
         
         
         // ensure that the document inserted is actually the correct one
-        try {
-            JSONObject json = new JSONObject(api.getUser(_id).toJson());
-            JSONObject profile = json.getJSONObject("profile");
-            JSONObject address = profile.getJSONObject("address");
-            assertEquals(_id, json.get("_id"));
-            assertEquals(name, profile.get("name"));
-            assertEquals(password, json.get("password"));
-            assertEquals(street, address.get("street"));
-            assertEquals(city, address.get("city"));
-            assertEquals(state, address.get("state"));
-            assertEquals(zipCode, address.get("zipCode"));
-            assertEquals(gender, profile.get("gender"));
-            assertEquals(dob, profile.get("dob"));
-        } catch (JSONException ex) {
-            Logger.getLogger(mongoDbAPITest.class.getName()).log(Level.SEVERE, null, ex);
-            fail("Something in the JSON access failed in insertUserTest");
-        }
+//        try {
+//            JSONObject json = new JSONObject(api.getUser(_id).toJson());
+//            JSONObject profile = json.getJSONObject("profile");
+//            JSONObject address = profile.getJSONObject("address");
+//            assertEquals(_id, json.get("_id"));
+//            assertEquals(name, profile.get("name"));
+//            assertEquals(password, json.get("password"));
+//            assertEquals(street, address.get("street"));
+//            assertEquals(city, address.get("city"));
+//            assertEquals(state, address.get("state"));
+//            assertEquals(zipCode, address.get("zipCode"));
+//            assertEquals(gender, profile.get("gender"));
+//            assertEquals(dob, profile.get("dob"));
+            assertTrue(newUser.equals(new User(api.getUser(_id))));
+//        } catch (JSONException ex) {
+//            Logger.getLogger(mongoDbAPITest.class.getName()).log(Level.SEVERE, null, ex);
+//            fail("Something in the JSON access failed in insertUserTest");
+//        }
     }
 
     /**
