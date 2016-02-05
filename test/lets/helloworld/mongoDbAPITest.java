@@ -187,4 +187,22 @@ public class mongoDbAPITest {
         System.out.println("login");
     }
     
+    @Test
+    public void testGetAllEvents() {
+        System.out.println("get all events");
+        String knownEventID1 = "56719c1d44fd702acc7a0c85";
+        String knownEventID2 = "56731ae9bfb2430dc03e87e1";
+        String knownEventID3 = "56731d97bfb2430dc03e87e3";
+        ArrayList<Event> allE = api.getAllEvents();
+        int eventFindCount = 0;
+        // cycle through all events searching for a particular few that I know should be in there.
+        for (Event e : allE) {
+            if (e.toEventDoc().get("_id").equals(knownEventID1) || e.toEventDoc().get("_id").equals(knownEventID2) || e.toEventDoc().get("_id").equals(knownEventID3)) {
+                eventFindCount++;
+            }
+        }
+        // check that all three specific events outlined above are found and accounted for
+        assertEquals(eventFindCount, 3);
+    }
+    
 }
