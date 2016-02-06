@@ -124,6 +124,7 @@ public class User {
 
 	public void follow(String following_id, MongoDatabase db) {
 		this.updateOne("user", "$push", "following", following_id, db);
+                this.following.add(following_id);
 	}
 
 	public void unfollow(String following_id, MongoDatabase db) {
@@ -132,6 +133,7 @@ public class User {
 
 	public void addInterests(String tag, MongoDatabase db) {
 		this.updateOne("user", "$push", "interests", tag, db);
+                this.interests.add(tag);
 	}
 
 	public ArrayList<User> getFriends(MongoDatabase db) {
