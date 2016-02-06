@@ -47,6 +47,10 @@ public class Event {
 		this.tags = tags;
 	}
 	
+        public String getID() {
+            return this._id;
+        }
+        
 	public Document toEventDoc(){
 		Document event = new Document("_id", _id)
 										.append("host_id", host_id)
@@ -70,6 +74,9 @@ public class Event {
 	public String toString(){
 		return this.toEventDoc().toJson();
 	}
-	
+        
+        public boolean equals(Event e) {
+            return e.getID().equals(this._id);
+        }
 
 }

@@ -124,5 +124,4 @@ public class UserTest {
         User user = new User(_id, password, name, street, city, state, zipCode, gender, dob);
         assertTrue(user.equals(user));
     }
-    
 }

@@ -57,4 +57,10 @@ public class EventTest {
         assertEquals(doc.get("host_id"), host_id);
         assertEquals(doc.get("title"), title);
     }
+    
+    @Test
+    public void testEquals(){
+        Event e = new Event(host_id, title, loc, startingTime, endtTime, description, tags);
+        assertTrue(e.equals(e));
+    }
 }
