@@ -6,6 +6,7 @@
 package lets.helloworld;
 
 import java.awt.geom.Point2D;
+import java.util.ArrayList;
 import java.util.Date;
 import org.bson.Document;
 import org.junit.AfterClass;
@@ -18,8 +19,24 @@ import static org.junit.Assert.*;
  * @author duffytj
  */
 public class EventTest {
+    String host_id;
+    String title;
+    Point2D.Double loc;
+    Date startingTime;
+    Date endtTime;
+    String description;
+    ArrayList<String> tags;
     
     public EventTest() {
+        this.host_id = "unique_id";
+        this.title = "title";
+        this.loc = new Point2D.Double();
+        this.startingTime = new Date();
+        this.endtTime = new Date();
+        this.description = "No Description";
+        this.tags = new ArrayList<String>();
+        this.tags.add("tag1");
+        this.tags.add("tag2");
     }
     
     @BeforeClass
@@ -35,49 +52,9 @@ public class EventTest {
      */
     @Test
     public void testToEventDoc() {
-        
+        Event e = new Event(host_id, title, loc, startingTime, endtTime, description, tags);
+        Document doc = e.toEventDoc();
+        assertEquals(doc.get("host_id"), host_id);
+        assertEquals(doc.get("title"), title);
     }
-
-    /**
-     * Test of getStartingTime method, of class Event.
-     */
-    @Test
-    public void testGetStartingTime() {
-        System.out.println("getStartingTime");
-        Event instance = null;
-        Date expResult = null;
-        Date result = instance.getStartingTime();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of getLocation method, of class Event.
-     */
-    @Test
-    public void testGetLocation() {
-        System.out.println("getLocation");
-        Event instance = null;
-        Point2D.Double expResult = null;
-        Point2D.Double result = instance.getLocation();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of toString method, of class Event.
-     */
-    @Test
-    public void testToString() {
-        System.out.println("toString");
-        Event instance = null;
-        String expResult = "";
-        String result = instance.toString();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-    
 }

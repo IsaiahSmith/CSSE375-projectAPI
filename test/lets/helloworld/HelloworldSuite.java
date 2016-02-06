@@ -18,7 +18,7 @@ import org.junit.runners.Suite;
  * @author duffytj
  */
 @RunWith(Suite.class)
-@Suite.SuiteClasses({lets.helloworld.InsertEventServletTest.class, lets.helloworld.InsertUserServletTest.class, lets.helloworld.GetUserServletTest.class, lets.helloworld.GetAllEventsServletTest.class})
+@Suite.SuiteClasses({lets.helloworld.mongoDbAPITest.class, lets.helloworld.InsertEventServletTest.class, lets.helloworld.InsertUserServletTest.class, lets.helloworld.GetUserServletTest.class, lets.helloworld.GetAllEventsServletTest.class, lets.helloworld.UserTest.class, lets.helloworld.EventTest.class,})
 public class HelloworldSuite {
 
     @BeforeClass
