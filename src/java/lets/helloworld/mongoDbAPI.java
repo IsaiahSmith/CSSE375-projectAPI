@@ -14,6 +14,7 @@ import java.io.InputStreamReader;
 import java.net.URL;
 import java.net.URLConnection;
 import java.util.ArrayList;
+import java.util.Arrays;
 import static java.util.Arrays.asList;
 
 public class mongoDbAPI {
@@ -58,16 +59,21 @@ public class mongoDbAPI {
 	}
         
         public ArrayList<Event> getSearchedEvents(String tags){
-		final ArrayList<Event> allE = new ArrayList<Event>();
-		FindIterable<Document> iterable = db.getCollection("event").find(new BasicDBObject("tags", tags));
-		iterable.forEach(new Block<Document>(){
-			@Override
-			public void apply(Document arg0) {
-				allE.add(new Event(arg0));
+            final ArrayList<Event> allE = new ArrayList<Event>();
+            final String searchTag = tags;
+            FindIterable<Document> iterable = db.getCollection("event").find(new BasicDBObject("tags", tags));
+            iterable.forEach(new Block<Document>(){
+                    @Override
+                    public void apply(Document arg0) {
+                        if (Arrays.asList(arg0.get("tags")).contains(searchTag)) {
+                            allE.add(new Event(arg0));
 //				System.out.println(arg0);
-			}
-		});
-		return allE;
+                        } else {
+                            allE.add(new Event(arg0));
+                        }
+                    }
+            });
+            return allE;
 	}
 	
 	public Event getEvent(String eventId){

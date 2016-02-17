@@ -3,19 +3,22 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/smithij/Documents/CSSE/375/CSSE375-projectAPI/src/java/lets/helloworld/InsertUserServlet.java</file>
-            <file>file:/C:/Users/smithij/Documents/CSSE/375/CSSE375-projectAPI/src/java/lets/helloworld/InsertEventServlet.java</file>
-            <file>file:/C:/Users/smithij/Documents/CSSE/375/CSSE375-projectAPI/src/java/lets/helloworld/FollowServlet.java</file>
-            <file>file:/C:/Users/smithij/Documents/CSSE/375/CSSE375-projectAPI/src/java/lets/helloworld/LoginServlet.java</file>
-            <file>file:/C:/Users/smithij/Documents/CSSE/375/CSSE375-projectAPI/src/java/lets/helloworld/User.java</file>
-            <file>file:/C:/Users/smithij/Documents/CSSE/375/CSSE375-projectAPI/src/java/lets/helloworld/MangoConnection.java</file>
-            <file>file:/C:/Users/smithij/Documents/CSSE/375/CSSE375-projectAPI/src/java/lets/helloworld/HelloWorldServlet.java</file>
-            <file>file:/C:/Users/smithij/Documents/CSSE/375/CSSE375-projectAPI/src/java/lets/helloworld/UnFollowServlet.java</file>
-            <file>file:/C:/Users/smithij/Documents/CSSE/375/CSSE375-projectAPI/src/java/lets/helloworld/AdvancedSearchServlet.java</file>
-            <file>file:/C:/Users/smithij/Documents/CSSE/375/CSSE375-projectAPI/src/java/lets/helloworld/mongoDbAPI.java</file>
-            <file>file:/C:/Users/smithij/Documents/CSSE/375/CSSE375-projectAPI/src/java/lets/helloworld/GetUserServlet.java</file>
-            <file>file:/C:/Users/smithij/Documents/CSSE/375/CSSE375-projectAPI/src/java/lets/helloworld/ResetPasswordServlet.java</file>
-            <file>file:/C:/Users/smithij/Documents/CSSE/375/CSSE375-projectAPI/src/java/lets/helloworld/GetAllEventsServlet.java</file>
+            <file>file:/C:/Users/duffytj/Documents/GitHub/CSSE375-projectAPI/test/lets/helloworld/InsertUserServletTest.java</file>
+            <file>file:/C:/Users/duffytj/Documents/GitHub/CSSE375-projectAPI/src/java/lets/helloworld/GetUserServlet.java</file>
+            <file>file:/C:/Users/duffytj/Documents/GitHub/CSSE375-projectAPI/test/lets/helloworld/GetAllEventsServletTest.java</file>
+            <file>file:/C:/Users/duffytj/Documents/GitHub/CSSE375-projectAPI/src/java/lets/helloworld/AdvancedSearchServlet.java</file>
+            <file>file:/C:/Users/duffytj/Documents/GitHub/CSSE375-projectAPI/src/java/lets/helloworld/InsertEventServlet.java</file>
+            <file>file:/C:/Users/duffytj/Documents/GitHub/CSSE375-projectAPI/src/java/lets/helloworld/FollowServlet.java</file>
+            <file>file:/C:/Users/duffytj/Documents/GitHub/CSSE375-projectAPI/test/lets/helloworld/EventTest.java</file>
+            <file>file:/C:/Users/duffytj/Documents/GitHub/CSSE375-projectAPI/src/java/lets/helloworld/Event.java</file>
+            <file>file:/C:/Users/duffytj/Documents/GitHub/CSSE375-projectAPI/test/lets/helloworld/GetUserServletTest.java</file>
+            <file>file:/C:/Users/duffytj/Documents/GitHub/CSSE375-projectAPI/test/lets/helloworld/UserTest.java</file>
+            <file>file:/C:/Users/duffytj/Documents/GitHub/CSSE375-projectAPI/src/java/lets/helloworld/User.java</file>
+            <file>file:/C:/Users/duffytj/Documents/GitHub/CSSE375-projectAPI/test/lets/helloworld/InsertEventServletTest.java</file>
+            <file>file:/C:/Users/duffytj/Documents/GitHub/CSSE375-projectAPI/test/lets/helloworld/HelloworldSuite.java</file>
+            <file>file:/C:/Users/duffytj/Documents/GitHub/CSSE375-projectAPI/src/java/lets/helloworld/GetAllEventsServlet.java</file>
+            <file>file:/C:/Users/duffytj/Documents/GitHub/CSSE375-projectAPI/test/lets/helloworld/mongoDbAPITest.java</file>
+            <file>file:/C:/Users/duffytj/Documents/GitHub/CSSE375-projectAPI/src/java/lets/helloworld/mongoDbAPI.java</file>
         </group>
     </open-files>
 </project-private>

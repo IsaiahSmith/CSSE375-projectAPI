@@ -11,6 +11,7 @@ import java.io.OutputStreamWriter;
 import java.util.Date;
 import java.awt.geom.Point2D;
 import java.util.ArrayList;
+import java.util.Arrays;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -86,8 +87,9 @@ public class InsertEventServlet extends AbstractServlet {
     }
 
     private ArrayList<String> parseTags(String tagsString) {
+        String[] strSplit = tagsString.split(", ");
         ArrayList<String> ans = new ArrayList<>();
-        ans.add("New");
+        ans.addAll(Arrays.asList(strSplit));
         return ans;
     }
 

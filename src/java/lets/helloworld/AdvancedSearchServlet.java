@@ -37,7 +37,7 @@ public class AdvancedSearchServlet extends AbstractServlet {
             OutputStreamWriter writer = new OutputStreamWriter(response.getOutputStream());
             try {
                 
-                ArrayList<Event> events = api.getSearchedEvents("dogs");
+                ArrayList<Event> events = api.getSearchedEvents(request.getParameter("tags"));
                 String ans = "";
                 for(Event e : events) {
                     ans += (e.toString() + "@@@@@");
